@@ -21,6 +21,10 @@ public:
 
 class FlyNoWay : public FlyBehavior {
     /* TODO */
+public:
+    void fly() override {
+        cout << "I can't fly..." <<endl;
+    }
 };
 
 //---------------------------------------------------
@@ -34,6 +38,9 @@ public:
 // 전략 구현 클래스들
 class Quack : public QuackBehavior {
     /* TODO */
+    void quack() override {
+        cout << "Quack!" <<endl;
+    }
 };
 
 class Squeak: public QuackBehavior {
@@ -44,7 +51,9 @@ public:
 };
 
 class MuteQuack : public QuackBehavior {
-    /* TODO */
+    void quack() override {
+        cout << "<<Silent>>" << endl;
+    }
 };
 
 // 오리 클래스
